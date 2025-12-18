@@ -107,8 +107,10 @@ deploy:
   type: ''
 
 symbols_count_time:
-  symbols: true                # 文章字数统计
-  time: true                   # 文章阅读时长
-  total_symbols: true          # 站点总字数统计
-  total_time: true             # 站点总阅读时长
-  exclude_codeblock: false     # 排除代码字数统计
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 1     # 添加这一行，代表中文字符权重
+  wpm: 125   # 调低到 150，让 1.4k 字的文章显示为更合理的 9 分钟左右
