@@ -1,15 +1,15 @@
 ---
 title: How to conduct research before the experiment?
-date: 2025-12-18 15:12:28
-tags:
+date: 2025-11-16 15:12:28
+categories:
 - research
 ---
 
-科研小白第一次进行项目调研，发现无从下手$\cdots$
+科研小白第一次进行项目调研，发现有点无从下手$\ldots$
 
 <!-- more -->
 
-[blog](https://zhuanlan.zhihu.com/p/468255795)
+参考了别人的[blog](https://zhuanlan.zhihu.com/p/468255795)进行学习，记录一下收获与感悟
 
 调研的目标：![](method.png)
 论文的意义就是找到现有方法存在的问题并提出改进，从而**提升效果**或者**减少成本**
