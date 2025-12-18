@@ -1,0 +1,62 @@
+body {
+      background: url(/images/background.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+}
+
+// 整体内容的背景透明
+.main-inner {
+    background: rgba(255, 255, 255, 0.7); // 0.7 是透明度，数值越小越透明
+    padding: 30px;
+    border-radius: 20px;
+}
+
+// 首页文章卡片背景透明 (如果你发现 main-inner 不够，可以加这一段)
+.post-block {
+    background: rgba(255, 255, 255, 0.5); // 让单篇文章卡片更加透明
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+// 侧边栏背景透明
+.sidebar {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+
+.post {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   padding: 25px;
+   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+   -moz-box-shadow: 0 0 5px rgba(202, 204, 204, .5);
+   box-shadow: 0 0 5px rgba(202, 204, 204, .5); /* 建议加上标准的 box-shadow */
+}
+
+.post-body p a{
+    color: #0593d3;
+    border-bottom: none;
+    &:hover {
+      color: #0477ab;
+      text-decoration: underline;
+    }
+}
+
+// 代码块样式自定义
+code {
+    color: #ff7600;
+    background: #fbf7f8;
+    margin: 2px;
+}
+.highlight, pre {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+.highlight, code, pre {
+    border: 1px solid #d6d6d6;
+}

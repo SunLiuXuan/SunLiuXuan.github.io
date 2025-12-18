@@ -1,0 +1,13 @@
+{% if post.top %}
+<span class="post-meta-item">
+  {# 仅给图标和文字包裹一层紫色样式 #}
+  <span style="color: #8e44ad; display: inline-flex; align-items: center;">
+    <span class="post-meta-item-icon" style="margin-right: 3px;">
+      <i class="fa fa-thumbtack"></i>
+    </span>
+    <span style="font-weight: bold;">置顶&nbsp</span>
+  </span>
+  {# 这里的竖线不加颜色，会自动使用主题默认颜色 #}
+  <span class="post-meta-divider">|</span>
+</span>
+{% endif %}
