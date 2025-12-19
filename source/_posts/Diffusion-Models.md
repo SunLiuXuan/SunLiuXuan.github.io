@@ -9,11 +9,12 @@ tags:
 - computer vision
 ---
 
-To be finished ...
+生成式模型是如何从“加噪”与“去噪”的物理直觉，进化到“随机微分过程”与“概率流匹配”的数学精密推导的？
+本文深入解析了 DDPM 的马尔可夫链基础与噪声回归本质，探讨了 DDIM 如何通过 ODE 视角实现采样加速，并进一步延伸至 Score Matching 在流形分布上的理论支撑，最后还剖析了 Flow Matching 如何利用最优传输理论将复杂的概率演化简化为高效的线性轨迹。通过对比 SDE 与 ODE 两种范式，希望探索生成模型在质量、速度与确定性之间取得平衡的数学底层逻辑，进而窥见扩散模型的数学本质。
 
 <!--more-->
 
-详细数学推导和介绍参考我的笔记~ (还在完善中，coming soon!)
+详细数学推导和介绍参考[我的笔记](https://kind-acai-b84.notion.site/diffusion-model-learning)~ (还在持续更新完善中!😀)
 
 # DDPM
 DDPM 是一种通过模拟非平衡热力学过程来生成的概率模型。它由两个对称的过程组成：前向扩散和反向去噪。
@@ -92,4 +93,7 @@ Flow Matching 的优势
     - 概率流 ODE (Probability Flow ODE)： SDE 框架还导出了一个等价的ODE，称为概率流 ODE (Probability Flow ODE)。这个 ODE 描述了与 SDE 相同的边际分布，但路径是确定性的。因此，Score Matching 训练出的模型可以同时用于 SDE 采样（随机）和 ODE 采样（确定性）。
     - 数学上可以证明，这个“概率流 ODE”所控制的概率密度 $p_t(\mathbf{x})$ 的演化，也恰好满足同一个 Fokker-Planck 方程，即：SDE 满足 FPE；概率流 ODE 同样满足 FPE
 - Flow Matching：整个训练和生成过程都是在确定性的 ODE 路径上进行的
+
 ![](ODE_SDE.png)
+
+P.S. 本文均为作者阅读后的一些总结与思考，如有错误，欢迎指出~
