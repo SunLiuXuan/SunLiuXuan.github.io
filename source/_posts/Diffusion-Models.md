@@ -7,6 +7,7 @@ tags:
 - AI
 - generative models
 - computer vision
+- diffusion model
 ---
 
 生成式模型是如何从“加噪”与“去噪”的物理直觉，进化到“随机微分过程”与“概率流匹配”的数学精密推导的？
