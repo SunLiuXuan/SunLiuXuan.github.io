@@ -92,7 +92,7 @@ projects:
 
 writing:
   - slug: NJUIS_Pre-Admission_Assessment
-    summary: 2026 智科预推免考核 经验贴
+    summary: 2026 南大智科 NJUIS 预推免考核 经验贴
   - slug: Diffusion-Models
     summary: From DDPM and DDIM to Score Matching and Flow Matching, this note organizes the ideas behind modern generative models.
   - slug: Feed-Forward-3D-Models

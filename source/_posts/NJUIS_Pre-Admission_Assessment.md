@@ -8,7 +8,7 @@ tags:
 - graduate recommendation
 ---
 
-**NJUIS 预推免考核 经验贴**
+**NJUIS 南大智科预推免考核 经验贴**
 
 <!--more-->
 
