@@ -1,0 +1,109 @@
+name: Liuxuan Sun
+greeting: Hi, I'm Liuxuan Sun.
+tagline: Learning, exploring, and sharing.
+avatar: /images/slx1.jpg
+intro: "Hi! I'm Liuxuan Sun, an undergraduate student at Nanjing University, majoring in Intelligent Science and Technology. My research interests lie broadly in computer vision, embodied AI, and multimodal agents, with a particular focus on video understanding, video generation, and vision-language-action models. I enjoy exploring how intelligent systems can perceive, reason about, and interact with the physical world."
+about: |
+  Hi, I'm Liuxuan Sun, an undergraduate student at Nanjing University, majoring in Intelligent Science and Technology.
+
+  My research interests broadly lie in computer vision, embodied AI, and multimodal intelligent systems. I am particularly interested in how AI agents can understand visual environments, reason about interactions, and take meaningful actions in the physical world. Recently, I have been exploring topics including egocentric video understanding, video generation, vision-language-action models, and agent-based visual reasoning.
+
+  Throughout my undergraduate studies, I have maintained strong academic performance and received several honors, including the People's Scholarship and the title of Outstanding Communist Youth League Member of Nanjing University. These experiences have also encouraged me to keep exploring both academic research and broader campus activities.
+
+  I am always interested in learning new ideas and collaborating on exciting research. Feel free to reach out if you would like to discuss research or potential collaborations!
+interests:
+  - Generative Models
+  - 3D Computer Vision
+  - Embodied AI
+links:
+  - label: GitHub
+    url: https://github.com/SunLiuXuan
+  - label: Email
+    url: mailto:slx20050722@gmail.com
+  - label: Twitter
+    url: https://x.com/Liuxuan_Sun
+news:
+  - date: 09/2026
+    text: "Redesigned and launched my personal <strong>homepage</strong> with updated sections."
+
+education:
+  - period: 2023 - present
+    school: Nanjing University
+    logo: /images/NJUlogo.png
+    degree: Undergraduate student · School of Intelligence Science and Technology
+    summary: Undergraduate student majoring in Intelligent Science and Technology.
+    details:
+      - "GPA: 4.58 / 5.0"
+      - "Major ranking: 16 / 151; top 10.5%"
+      - "CET-4: 629; CET-6: 609"
+      - "Selected coursework: Data Structures and Algorithms (100), Probability and Mathematical Statistics (98), Deep Learning Platforms and Applications (98), Introduction to Optimization Methods (96), Introduction to Machine Learning (95), Calculus (96), Linear Algebra (96)."
+honors:
+  - year: 2025
+    title: People's Scholarship, First Prize
+    detail: Awarded by Nanjing University
+  - year: 2025
+    title: Outstanding Communist Youth League Member of Nanjing University
+    detail: Recognized by Nanjing University
+  - year: 2025
+    title: First Prize The 16th National College Student Mathematics Competition
+    detail: Non-Mathematics Category A
+  - year: 2024
+    title: People's Scholarship, First Prize
+    detail: Awarded by Nanjing University
+  - year: 2024
+    title: Second Prize EL Programming Design Contest
+    detail: In Intersection Group
+
+publications:
+  - title: TBD
+    year: 2027
+    authors: Liuxuan Sun, Collaborators
+    venue: Conference / Journal / Workshop
+    links:
+      - label: paper
+        url: '#'
+    summary: Replace this with a short description of the work, its main idea, and its status.
+
+projects:
+  - title: NJUIS Wiki
+    year: 2026
+    featured: true
+    image: /images/njuis-wiki.jpg
+    authors: NJUIS Students, co-initiated by Liuxuan Sun
+    links:
+      - label: wiki
+        url: https://njuis-students.github.io/
+      - label: github
+        url: https://github.com/NJUIS-Students/NJUIS-Students.github.io
+    # tags:
+    summary: A community-driven wiki built by NJUIS students, offering practical guides on courses, academics, research, career development, and student life in Suzhou Campus.
+  - title: 文脉智旅
+    year: 2026
+    featured: true
+    image: /images/smartcultour.png
+    authors: WenMai ZhiLyu Team, joined by Liuxuan Sun
+    links:
+      - label: website
+        url: https://www.smartcultour.com/
+    tags:
+      - AI4Culture
+      - KAG & RAG
+    summary: Bringing local history and culture to life with knowledge-enhanced AI, from archival understanding to trustworthy cultural content generation.
+
+writing:
+  - slug: NJUIS_Pre-Admission_Assessment
+    summary: 2026 智科预推免考核 经验贴
+  - slug: Diffusion-Models
+    summary: From DDPM and DDIM to Score Matching and Flow Matching, this note organizes the ideas behind modern generative models.
+  - slug: Feed-Forward-3D-Models
+    summary: A survey-style note on feed-forward 3D reconstruction, from camera localization to large-scale scene recovery.
+
+
+
+
+
+
+
+
+
+

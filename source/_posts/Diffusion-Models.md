@@ -4,14 +4,12 @@ date: 2025-12-18 19:48:53
 categories:
 - research
 tags:
-- AI
 - generative models
 - computer vision
 - diffusion model
 ---
 
-生成式模型是如何从“加噪”与“去噪”的物理直觉，进化到“随机微分过程”与“概率流匹配”的数学精密推导的？
-本文深入解析了 DDPM 的马尔可夫链基础与噪声回归本质，探讨了 DDIM 如何通过 ODE 视角实现采样加速，并进一步延伸至 Score Matching 在流形分布上的理论支撑，最后还剖析了 Flow Matching 如何利用最优传输理论将复杂的概率演化简化为高效的线性轨迹。通过对比 SDE 与 ODE 两种范式，希望探索生成模型在质量、速度与确定性之间取得平衡的数学底层逻辑，进而窥见扩散模型的数学本质。
+本文从 DDPM 出发，梳理生成模型从离散加噪与去噪，到 SDE、ODE 与 Flow Matching 的演进过程。通过 DDPM、DDIM、Score Matching 与 Flow Matching 的对比，解析扩散模型背后的概率建模逻辑，并探讨生成质量、采样速度与确定性之间的权衡。
 
 <!--more-->
 

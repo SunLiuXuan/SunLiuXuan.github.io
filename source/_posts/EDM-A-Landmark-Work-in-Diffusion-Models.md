@@ -4,7 +4,6 @@ date: 2025-12-19 15:02:02
 categories:
 - research
 tags:
-- AI
 - generative models
 - computer vision
 - diffusion model

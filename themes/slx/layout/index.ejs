@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blogs | <%= config.author %></title>
+<meta name="description" content="Blogs by <%= config.author %>">
+<link rel="canonical" href="<%= full_url_for('/blogs/') %>">
+<script>try{const t=localStorage.getItem('slx-theme');const d=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=d;document.documentElement.style.colorScheme=d;}catch(e){}</script>
+<link rel="stylesheet" href="<%- url_for('/css/site.css') %>">
+<script defer src="<%- url_for('/js/theme.js') %>"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap">
+<a class="brand" href="<%- url_for('/') %>">SLX's Homepage</a>
+<nav aria-label="主导航"><a href="<%- url_for('/projects/') %>">Projects</a><a class="active" href="<%- url_for('/blogs/') %>">Blogs</a><a href="<%- url_for('/about/') %>">About</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color mode" title="Toggle color mode"><span class="theme-icon theme-icon-light">☀</span><span class="theme-icon theme-icon-dark">☾</span></button></nav>
+</header>
+<main id="main" class="wrap page-shell">
+<header class="page-hero">
+<p class="eyebrow">Blogs</p>
+<h1>Notes, readings, and research logs.</h1>
+
+</header>
+<section class="post-list" aria-label="Blogs">
+<% page.posts.each(function(post) { const raw = (post.excerpt || post.content || '').replace(/<[^>]*>/g, '').trim(); %>
+<article class="post-row">
+<time datetime="<%= post.date.format('YYYY-MM-DD') %>"><%= post.date.format('YYYY-MM-DD') %></time>
+<div>
+<h3><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+<p><%= raw.slice(0, 150) %><% if (raw.length > 150) { %>...<% } %></p>
+<% if (post.tags && post.tags.length) { %>
+<div class="post-tags"><% post.tags.each(function(tag) { %><span>#<%= tag.name %></span><% }); %></div>
+<% } %>
+</div>
+</article>
+<% }); %>
+</section>
+<nav class="pager" aria-label="分页">
+<span><% if (page.prev) { %><a href="<%- url_for(page.prev_link) %>">Newer posts</a><% } %></span>
+<span><% if (page.next) { %><a href="<%- url_for(page.next_link) %>">Older posts</a><% } %></span>
+</nav>
+</main>
+<footer class="site-footer wrap"><span>© <%= new Date().getFullYear() %> <%= config.author %></span><span><a href="<%- url_for('/') %>">Home</a></span></footer>
+</body>
+</html>
+
+

@@ -4,11 +4,10 @@ date: 2025-11-23 19:27:17
 categories:
 - research
 tags:
-- AI
 - 3D computer vision
 ---
 
-本文梳理了前馈 3D 重建模型（Feed-Forward 3D Models）从相机定位到大规模场景恢复的技术演进脉络。从早期的端到端位姿回归（PoseNet），到基于 ViT 和稠密预测的几何重建标杆（DUSt3R 及其演进版 MASt3R），再到完全依靠 data-driven 的 VGGT，前馈模型正逐步摆脱对传统优化对齐的依赖。
+本文梳理前馈 3D 重建模型从相机位姿估计到大规模场景恢复的演进路径，涵盖 PoseNet、DUSt3R、MASt3R 与 VGGT 等代表性工作，并分析其如何逐步从传统几何优化转向更统一的数据驱动式三维重建范式。
 
 <!--more-->
 

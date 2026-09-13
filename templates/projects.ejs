@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | <%= profile.name %></title>
+<meta name="description" content="Projects by <%= profile.name %>">
+<link rel="canonical" href="<%= siteUrl %>/projects/">
+<script>try{const t=localStorage.getItem('slx-theme');const d=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=d;document.documentElement.style.colorScheme=d;}catch(e){}</script>
+<link rel="stylesheet" href="/css/site.css">
+<script defer src="/js/theme.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap">
+<a class="brand" href="/">SLX's Homepage</a>
+<nav aria-label="主导航"><a class="active" href="/projects/">Projects</a><a href="/blogs/">Blogs</a><a href="/about/">About</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color mode" title="Toggle color mode"><span class="theme-icon theme-icon-light">☀</span><span class="theme-icon theme-icon-dark">☾</span></button></nav>
+</header>
+<main id="main" class="wrap page-shell">
+<header class="page-hero">
+<p class="eyebrow">Projects</p>
+<h1>Research, build, iterate.</h1>
+
+</header>
+<section class="project-display-list" aria-label="Projects">
+<% (profile.projects || []).forEach(project => { %>
+<article class="project-entry">
+<% if (project.image) { %>
+<a class="project-thumb" href="<%= (project.links && project.links[0] && project.links[0].url) || project.url || '#' %>" aria-label="<%= project.title %>"><img src="<%= project.image %>" alt="<%= project.title %> preview" loading="lazy"></a>
+<% } %>
+<div class="project-info">
+<h3><a href="<%= (project.links && project.links[0] && project.links[0].url) || project.url || '#' %>"><%= project.title %></a><% if (project.year) { %><span class="project-year"><%= project.year %></span><% } %>
+<% if (project.links && project.links.length) { %><span class="project-links"><% project.links.forEach(link => { %> <a href="<%= link.url %>">[<%= link.label %>]</a><% }); %></span><% } %>
+</h3>
+<% if (project.authors) { %><p class="project-authors"><%= project.authors %></p><% } %>
+<% if (project.tags && project.tags.length) { %><p class="project-tags"><% project.tags.forEach((tag, index) => { %><span><%= tag %></span><% if (index < project.tags.length - 1) { %><span class="tag-separator">·</span><% } %><% }); %></p><% } %>
+<% if (project.summary) { %><p class="project-summary"><%= project.summary %></p><% } %>
+</div>
+</article>
+<% }); %>
+</section>
+</main>
+<footer class="site-footer wrap"><span>© <%= year %> <%= profile.name %></span><span><a href="/">Home</a></span></footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

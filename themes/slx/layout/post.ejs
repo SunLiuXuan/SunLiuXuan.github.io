@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= page.title %> | <%= config.author %></title>
+<meta name="description" content="<%= (page.excerpt || page.content || '').replace(/<[^>]*>/g, '').trim().slice(0, 160) %>">
+<link rel="canonical" href="<%= full_url_for(page.path) %>">
+<script>try{const t=localStorage.getItem('slx-theme');const d=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=d;document.documentElement.style.colorScheme=d;}catch(e){}</script>
+<link rel="stylesheet" href="<%- url_for('/css/site.css') %>">
+<script defer src="<%- url_for('/js/theme.js') %>"></script>
+<script>
+window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }, svg: { fontCache: 'global' } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+<a class="brand" href="<%- url_for('/') %>">SLX's Homepage</a>
+<nav aria-label="Primary navigation"><a href="<%- url_for('/projects/') %>">Projects</a><a class="active" href="<%- url_for('/blogs/') %>">Blogs</a><a href="<%- url_for('/about/') %>">About</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color mode" title="Toggle color mode"><span class="theme-icon theme-icon-light">☀</span><span class="theme-icon theme-icon-dark">☾</span></button></nav>
+</header>
+<main id="main" class="wrap article-shell">
+<article class="article">
+<header class="article-header">
+<h1 class="article-title"><%= page.title %></h1>
+<div class="article-meta">
+<time datetime="<%= page.date.format('YYYY-MM-DD') %>"><%= page.date.format('YYYY-MM-DD') %></time>
+<% if (page.categories && page.categories.length) { %>
+<span> · <% page.categories.each(function(category, index) { %><%= index ? ', ' : '' %><%= category.name %><% }); %></span>
+<% } %>
+</div>
+</header>
+<div class="article-content">
+<%- page.content %>
+</div>
+<footer class="article-nav" aria-label="Post navigation">
+<div class="article-nav-item article-nav-prev"><% if (page.prev) { %><a href="<%- url_for(page.prev.path) %>">Previous Blog</a><% } %></div>
+<div class="article-nav-item article-nav-center"><a href="<%- url_for('/blogs/') %>">Back to Blogs</a></div>
+<div class="article-nav-item article-nav-next"><% if (page.next) { %><a href="<%- url_for(page.next.path) %>">Next Blog</a><% } %></div>
+</footer>
+</article>
+<aside class="article-toc" aria-label="Table of contents">
+<div class="toc-title">Contents</div>
+<%- toc(page.content, { min_depth: 1, max_depth: 3, list_number: false }) %>
+</aside>
+</main>
+<footer class="site-footer wrap"><span>© <%= new Date().getFullYear() %> <%= config.author %></span><span>Stay curious and energetic.</span></footer>
+</body>
+</html>
+
