@@ -141,8 +141,9 @@ h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.4; font-weight: 400; }
 .article-title { margin-bottom: 14px; }
 .article-meta { color: var(--muted); font-size: 14px; line-height: 1.8; }
 .article-content { font-size: 18px; line-height: 1.9; min-width: 0; overflow-wrap: anywhere; }
-.article-content mjx-container { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
-.article-content mjx-container[jax="SVG"] { display: block; }
+.article-content mjx-container { max-width: 100%; }
+.article-content mjx-container[jax="SVG"] { display: inline-block; vertical-align: -0.12em; overflow: visible; }
+.article-content mjx-container[jax="SVG"][display="true"] { display: block; overflow-x: auto; overflow-y: hidden; }
 .article-content h1, .article-content h2, .article-content h3, .article-content h4 { margin: 2.1em 0 .7em; line-height: 1.32; font-weight: 600; }
 .article-content h1 { font-size: 32px; }
 .article-content h2 { font-size: 27px; }
@@ -280,27 +281,4 @@ h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.4; font-weight: 400; }
   .article-footer, .site-footer { flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
