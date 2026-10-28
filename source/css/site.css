@@ -65,6 +65,7 @@ nav a:hover, nav a.active { color: var(--ink); text-decoration: none; }
 h1 { font-size: clamp(31px, 3.6vw, 42px); line-height: 1.16; margin: 0 0 14px; font-weight: 700; letter-spacing: 0; }
 .tagline { font-size: 20px; line-height: 1.5; margin: 0 0 15px; }
 .socials { display: flex; flex-wrap: wrap; gap: 20px; font-size: 15px; }
+.link-placeholder { color: var(--muted); }
 .bio { font-size: 15px; line-height: 1.85; margin: 28px 0 14px; }
 .interests { margin: 0; font-size: 14px; line-height: 1.8; color: var(--muted); }
 .interests span { color: var(--ink); margin-right: 20px; font-style: italic; }
@@ -169,18 +170,20 @@ h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.4; font-weight: 400; }
 .article-toc li { margin: 6px 0; }
 .article-toc a { color: var(--muted); }
 .article-toc a:hover { color: var(--link); text-decoration: none; }
-.about-page { padding: 36px 0 52px; }
+.about-page { padding: 42px 0 52px; }
 .about-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: 54px;
   align-items: start;
 }
-.about-copy { font-size: 16px; line-height: 1.85; }
+.about-copy { align-self: center; font-size: 16px; line-height: 1.85; }
 .about-copy p { margin: 0 0 16px; }
+.about-copy p:last-child { margin-bottom: 0; }
 .about-copy strong { font-weight: 700; }
-.about-media { align-self: center; }
+.about-media { align-self: start; width: 240px; max-width: 100%; }
 .about-photo {
+  display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
@@ -189,14 +192,20 @@ h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.4; font-weight: 400; }
   margin-top: 4px;
 }
 .about-links {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.about-link-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 16px;
-  font-size: 18px;
+  gap: 6px 10px;
 }
-.about-links span { color: var(--muted); }
+.about-link-row > * { white-space: nowrap; }
+.about-link-separator { color: var(--muted); }
 .about-section {
   border-top: 1px solid var(--line);
   margin-top: 42px;
@@ -267,10 +276,8 @@ h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.4; font-weight: 400; }
   .article-content h2 { font-size: 24px; }
   .about-page { padding-top: 30px; }
   .about-intro { grid-template-columns: 1fr; gap: 24px; }
-  .about-media { align-self: start; }
-  .about-photo { max-width: 280px; }
+  .about-intro + .about-section { margin-top: 30px; }
   .about-copy, .about-news-list { font-size: 16px; line-height: 1.5; }
-  .about-links { justify-content: flex-start; font-size: 16px; max-width: 280px; }
   .about-section h2 { font-size: 22px; }
   .about-project-list .project-entry { grid-template-columns: 1fr; }
   .education-card { grid-template-columns: 48px 1fr; gap: 14px; align-items: start; }

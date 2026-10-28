@@ -2,19 +2,17 @@ name: Liuxuan Sun
 greeting: Hi, I'm Liuxuan Sun.
 tagline: Learning, exploring, and sharing.
 avatar: /images/slx1.jpg
-intro: "Hi! I'm Liuxuan Sun, an undergraduate student at Nanjing University, majoring in Intelligent Science and Technology. My research interests lie broadly in computer vision, embodied AI, and multimodal agents, with a particular focus on video understanding, video generation, and vision-language-action models. I enjoy exploring how intelligent systems can perceive, reason about, and interact with the physical world."
+intro: "Hi, I’m Liuxuan Sun, an undergraduate student majoring in Intelligent Science and Technology at Nanjing University. I will continue my studies at NJU as a master’s student under the supervision of Professor Wei Li. My research interests span computer vision, embodied AI, and autonomous driving. I am interested in exploring how intelligent systems perceive, understand, and interact with the physical world."
 about: |
-  Hi, I'm Liuxuan Sun, an undergraduate student at Nanjing University, majoring in Intelligent Science and Technology.
+  Hi, I’m Liuxuan Sun, an undergraduate student majoring in Intelligent Science and Technology at Nanjing University. I will continue my studies at NJU as a master’s student under the supervision of Professor Wei Li.
 
-  My research interests broadly lie in computer vision, embodied AI, and multimodal intelligent systems. I am particularly interested in how AI agents can understand visual environments, reason about interactions, and take meaningful actions in the physical world. Recently, I have been exploring topics including egocentric video understanding, video generation, vision-language-action models, and agent-based visual reasoning.
+  My research interests span computer vision, embodied AI, and autonomous driving. I am particularly interested in how AI agents understand visual environments, reason about interactions, and take meaningful actions in the physical world. Currently, I am exploring vision-language-action (VLA) models and world models, and investigating their application to end-to-end autonomous driving.
 
-  Throughout my undergraduate studies, I have maintained strong academic performance and received several honors, including the People's Scholarship and the title of Outstanding Communist Youth League Member of Nanjing University. These experiences have also encouraged me to keep exploring both academic research and broader campus activities.
-
-  I am always interested in learning new ideas and collaborating on exciting research. Feel free to reach out if you would like to discuss research or potential collaborations!
+  I am always eager to explore new ideas and collaborate on research. Please feel free to reach out to discuss research or potential collaborations!
 interests:
-  - Generative Models
   - 3D Computer Vision
   - Embodied AI
+  - Autonomous Driving
 links:
   - label: GitHub
     url: https://github.com/SunLiuXuan
@@ -22,6 +20,10 @@ links:
     url: mailto:slx20050722@gmail.com
   - label: Twitter
     url: https://x.com/Liuxuan_Sun
+  - label: ORCID
+    url: https://orcid.org/0009-0000-2486-4282
+  - label: Google Scholar
+    url: '' # Add your Google Scholar profile URL when available.
 news:
   - date: 09/2026
     text: "Redesigned and launched my personal <strong>homepage</strong> with updated sections."

@@ -24,7 +24,7 @@
 <div class="hero">
 <img class="portrait" src="<%= profile.avatar %>" alt="<%= profile.name %>" width="148" height="148">
 <div><h1 id="greeting"><%= profile.greeting %></h1><p class="tagline"><%= profile.tagline %></p>
-<div class="socials" aria-label="Contact links"><% profile.links.forEach(link => { %><a href="<%= link.url %>"><%= link.label %></a><% }); %></div>
+<div class="socials" aria-label="Contact links"><% profile.links.forEach(link => { %><% if (link.url) { %><a href="<%= link.url %>"><%= link.label %></a><% } else { %><span class="link-placeholder" title="Profile link coming soon"><%= link.label %></span><% } %><% }); %></div>
 </div></div>
 <p class="bio"><%= profile.intro %></p>
 <p class="interests"><span>Interests</span><%= profile.interests.join(' · ') %></p>

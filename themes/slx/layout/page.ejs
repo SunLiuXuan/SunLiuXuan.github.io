@@ -25,7 +25,17 @@
 </div>
 <div class="about-media">
 <img class="about-photo" src="<%= profile.avatar || '/images/slx1.jpg' %>" alt="<%= profile.name || config.author %>" loading="lazy">
-<div class="about-links" aria-label="Contact links"><% (profile.links || []).forEach((link, index) => { %><% if (index) { %><span>/</span><% } %><a href="<%= link.url %>"><%= link.label %></a><% }); %></div>
+<div class="about-links" aria-label="Contact links">
+<% const contactLinks = profile.links || []; %>
+<% for (let i = 0; i < contactLinks.length; i += 3) { %>
+<div class="about-link-row">
+<% contactLinks.slice(i, i + 3).forEach((link, index) => { %>
+<% if (index) { %><span class="about-link-separator" aria-hidden="true">·</span><% } %>
+<% if (link.url) { %><a href="<%= link.url %>"><%= link.label %></a><% } else { %><span class="link-placeholder" title="Profile link coming soon"><%= link.label %></span><% } %>
+<% }); %>
+</div>
+<% } %>
+</div>
 </div>
 </section>
 
