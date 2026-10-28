@@ -21,7 +21,7 @@
 <main id="main" class="wrap about-page">
 <section class="about-intro" aria-label="About Liuxuan Sun">
 <div class="about-copy">
-<% (profile.about || '').split(/\n\s*\n/).filter(Boolean).forEach(paragraph => { %><p><%= paragraph.trim() %></p><% }); %>
+<%- markdown(profile.about || '') %>
 </div>
 <div class="about-media">
 <img class="about-photo" src="<%= profile.avatar || '/images/slx1.jpg' %>" alt="<%= profile.name || config.author %>" loading="lazy">
